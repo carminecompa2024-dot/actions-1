@@ -8,27 +8,14 @@ jobs:
        steps:
         - name: Checkout Repo
           uses: actions/checkout@v6
-        
-        - name: Install Cowsay Repo
-          run: sudo apt-get install cowsay -y
-          
-        - name: List and Read files
-          run: |
-           echo "My first Github Actions Job"
-           ls -ltra
-           cat README.md
-        
-        - name: Generate ASCII Artwork
-          run: cowsay -f dragon "Run for cover, I am a DRAGON...RAWR"  >> dragon.txt
-
-        - name: Test file Exists
-          run : grep -i "dragon" dragon.txt
-
-        - name: Read File
-          run: cat dragon.txt
 
         - name: List files
           run: ls -ltra
+        
+        - name: Executing shell script 
+          run: ./ascii-script.sh
+
+     
 
         #- name: Read file
         #  run: cat README.md 
