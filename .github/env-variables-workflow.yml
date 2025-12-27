@@ -8,6 +8,7 @@ env:
   DOCKER_USERNAME: siddharth1
   IMAGE_NAME: github-actions-nginx
 
+
 jobs:
   docker:
     runs-on: ubuntu-latest
